@@ -13,221 +13,135 @@ namespace HomeworkTracker
 {
     public partial class HomeWorkTrackerHomeS : Form
     {
+        Color ClassButtonBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(90)))), ((int)(((byte)(136)))));
+        Font ClassButtonFont = new System.Drawing.Font("Brush Script MT", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        Size ClassButtonSize = new Size(170, 66);
+        String DateDisplayFormat = "MM/dd/yyyy";
+        String DataLocation = @"C:\Users\Public\Documents";
+
+        SchoolClass ActiveClass = null;
+        List<SchoolClass> AllClasses = new List<SchoolClass>();
+        Button CreateClassListButton()
+        {
+            Button classButton = new Button();
+            classButton.BackColor = ClassButtonBackgroundColor;
+            classButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            classButton.Font = ClassButtonFont;
+            //classButton.Location = new System.Drawing.Point(0, 66);  //Don't care about location Here.
+            classButton.Padding = new System.Windows.Forms.Padding(1);
+            classButton.Size = new Size(170, 66);
+            classButton.TabIndex = 1;//When controls share tab indexes they are iterated in the order in which they are known in memory which in our case will be the order in which we insert them into the list.
+            classButton.UseVisualStyleBackColor = false;
+            return classButton;
+
+        }
+        Button CreateClassButton(SchoolClass sClass)
+        {
+            var classButton = CreateClassListButton();
+            classButton.Name = $"Class{sClass.Id}Button";
+            classButton.Text = $"{sClass.Name}";
+            classButton.Tag = sClass;
+            classButton.Click += (s, e) => { LoadClass((SchoolClass)((Control)s).Tag); };
+            return classButton;
+        }
+        Button CreateNewClassButton()
+        {
+            var classButton = CreateClassListButton();
+            classButton.Name = "CreateNewClassButton";
+            classButton.Text = "Add Class";
+            classButton.Click += (s, e) =>
+            {
+                var newClass = new SchoolClass() { Name = "New Class" };
+                AllClasses.Add(newClass);
+                RefreshClassList();
+                LoadClass(newClass);
+            };
+            return classButton;
+        }
+        public void LoadClass(SchoolClass sClass)
+        {
+            _TBClassName.Text = sClass.Name;
+            _CLBAssignments.Items.Clear();
+            if (sClass.Assignments != null)
+                foreach (var assignment in sClass.Assignments)
+                    _CLBAssignments.Items.Add(assignment, assignment.Completed);
+            ActiveClass = sClass;
+        }
+
         public HomeWorkTrackerHomeS()
         {
             InitializeComponent();
+
+        }
+        void SaveAndClose()
+        {
+            foreach (var sClass in AllClasses)
+                sClass.ToFile(System.IO.Path.Combine(DataLocation, $"Class{sClass.Id}.txt"));
+            this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        void RefreshClassList()
         {
-            Class1Panel.Visible = false;
-            Class2Panel.Visible = true;
-            Class3Panel.Visible = false;
-            Class4Panel.Visible = false;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Class1Panel.Visible = true;
-            Class2Panel.Visible = false;
-            Class3Panel.Visible = false;
-            Class4Panel.Visible = false;
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            using (System.IO.StreamWriter A = new System.IO.StreamWriter(@"C:\Users\Public\Documents\Class1.txt")) // Saves Class 1 items into .txt file
+            _PNLClassList.Controls.Clear();
+            int i = 0;
+            foreach(var sClass in AllClasses)
             {
-                foreach (var item in checkedListBox1.Items)
-                {
-                    A.WriteLine(item.ToString());
-                }
+                var nxtBtn = CreateClassButton(sClass);
+                nxtBtn.Location = new Point(0, i*(nxtBtn.Height+1));
+                _PNLClassList.Controls.Add(nxtBtn);
+                i++;
             }
-            using (System.IO.StreamWriter A = new System.IO.StreamWriter(@"C:\Users\Public\Documents\Class2.txt")) // Saves Class 2 items into .txt file
-            {
-                foreach (var item in checkedListBox2.Items)
-                {
-                    A.WriteLine(item.ToString());
-                }
-            }
-            using (System.IO.StreamWriter A = new System.IO.StreamWriter(@"C:\Users\Public\Documents\Class3.txt")) // Saves Class 3 items into .txt file
-            {
-                foreach (var item in checkedListBox3.Items)
-                {
-                    A.WriteLine(item.ToString());
-                }
-            }
-            using (System.IO.StreamWriter A = new System.IO.StreamWriter(@"C:\Users\Public\Documents\Class4.txt")) // Saves Class 4 items into .txt file
-            {
-                foreach (var item in checkedListBox4.Items)
-                {
-                    A.WriteLine(item.ToString());
-                }
-            }
-
-            this.Close(); //Closes program when "Save/Exit" button is pressed
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Class1Button.Text = Class1NameBox.Text; // Adds class 1 names from class 1 textbox
-            Class1Group.Text = Class1NameBox.Text; // Adds class 1 name to class 1 group box
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            checkedListBox1.Items.Add(textBox1.Text);// Adds item to Class 1
-        }
-
-        private void button6_Click_1(object sender, EventArgs e)
-        {
-            for (int i = checkedListBox1.Items.Count - 1; i >= 0; i--) // Removes selected item in Class 1
-            {
-                if (checkedListBox1.GetItemChecked(i))
-                {
-                    checkedListBox1.Items.Remove(checkedListBox1.Items[i]);
-                }
-            }
-        }
-
-        private void Class3Button_Click(object sender, EventArgs e)
-        {
-            Class1Panel.Visible = false;
-            Class2Panel.Visible = false;
-            Class3Panel.Visible = true;
-            Class4Panel.Visible = false;
-        }
-
-        private void Class4Button_Click(object sender, EventArgs e)
-        {
-            Class1Panel.Visible = false;
-            Class2Panel.Visible = false;
-            Class3Panel.Visible = false;
-            Class4Panel.Visible = true;
-        }
-
-        private void button9_Click_1(object sender, EventArgs e)
-        {
-            Class3Button.Text = Class3NameBox.Text; // Adds class 3 names from class 3 textbox
-            Class3Group.Text = Class3NameBox.Text; // Adds class 3 name to class 3 group box
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            Class2Button.Text = Class2NameBox.Text; // Adds class 2 names from class 2 textbox
-            Class2Group.Text = Class2NameBox.Text; // Adds class 2 name to class 2 group box
-        }
-
-        private void button12_Click_1(object sender, EventArgs e)
-        {
-            Class4Button.Text = Class4NameBox.Text; // Adds class 4 names from class 4 textbox
-            Class4Group.Text = Class4NameBox.Text; // Adds class 4 name to class 4 group box
-        }
-
-        private void button8_Click_1(object sender, EventArgs e)
-        {
-            checkedListBox3.Items.Add(textBox4.Text);// Adds item to Class 3
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            checkedListBox4.Items.Add(textBox4.Text);// Adds item to Class 4
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            checkedListBox2.Items.Add(textBox2.Text); // Adds item to Class 2
-        }
-
-        private void button7_Click_1(object sender, EventArgs e)
-        {
-            for (int i = checkedListBox3.Items.Count - 1; i >= 0; i--) // Removes selected item in Class 3
-            {
-                if (checkedListBox3.GetItemChecked(i))
-                {
-                    checkedListBox3.Items.Remove(checkedListBox3.Items[i]);
-                }
-            }
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            for (int i = checkedListBox4.Items.Count - 1; i >= 0; i--) // Removes selected item in Class 4
-            {
-                if (checkedListBox4.GetItemChecked(i))
-                {
-                    checkedListBox4.Items.Remove(checkedListBox4.Items[i]);
-                }
-            }
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            for (int i = checkedListBox2.Items.Count - 1; i >= 0; i--) // Removes selected item in Class 2
-            {
-                if (checkedListBox2.GetItemChecked(i))
-                {
-                    checkedListBox2.Items.Remove(checkedListBox2.Items[i]);
-                }
-            }
+            var addClassBtn = CreateNewClassButton();
+            addClassBtn.Location = new Point(0, i * (addClassBtn.Height + 1));
+            _PNLClassList.Controls.Add(addClassBtn);
         }
 
         private void HomeWorkTrackerHomeS_Load(object sender, EventArgs e)
         {
-            string Class1 = @"C:\Users\Public\Documents\Class1.txt"; // String Class1 Database
-            if (File.Exists(Class1))
+            foreach (var f in System.IO.Directory.EnumerateFiles(DataLocation,"Class*.txt"))
             {
-                using (System.IO.StreamReader A = new StreamReader(@"C:\Users\Public\Documents\Class1.txt")) // Opens Database when program is opened
-                    while (A.Peek() > -1)
-                        checkedListBox1.Items.Add(A.ReadLine());
+                AllClasses.Add(SchoolClass.FromFile(f));
             }
-            else
-            {
-                return; // Makes sure not to give error when no database exists
-            }
-            string Class2 = @"C:\Users\Public\Documents\Class2.txt"; // String Class2 Database
-            if (File.Exists(Class2))
-            {
-                using (System.IO.StreamReader A = new StreamReader(@"C:\Users\Public\Documents\Class2.txt")) // Opens Database when program is opened
-                    while (A.Peek() > -1)
-                        checkedListBox2.Items.Add(A.ReadLine());
-            }
-            else
-            {
-                return; // Makes sure not to give error when no database exists
-            }
-            string Class3 = @"C:\Users\Public\Documents\Class3.txt"; // String Class3 Database
-            if (File.Exists(Class3))
-            {
-                using (System.IO.StreamReader A = new StreamReader(@"C:\Users\Public\Documents\Class3.txt")) // Opens Database when program is opened
-                    while (A.Peek() > -1)
-                        checkedListBox3.Items.Add(A.ReadLine());
-            }
-            else
-            {
-                return; // Makes sure not to give error when no database exists
-            }
-            string Class4 = @"C:\Users\Public\Documents\Class4.txt"; // String Class4 Database
-            if (File.Exists(Class4))
-            {
-                using (System.IO.StreamReader A = new StreamReader(@"C:\Users\Public\Documents\Class4.txt")) // Opens Database when program is opened
-                    while (A.Peek() > -1)
-                        checkedListBox4.Items.Add(A.ReadLine());
-            }
-            else
-            {
-                return; // Makes sure not to give error when no database exists
-            }
+            
+            RefreshClassList();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ActiveClass.Name = _TBClassName.Text;
+            RefreshClassList();
+        }
+
+        private void _BTNAddAssignment_Click(object sender, EventArgs e)
+        {
+            if (ActiveClass.Assignments == null)
+                ActiveClass.Assignments = new List<Assignment>();
+            var newAssignment = new Assignment() { Completed = false, Description = _TBAssignmentName.Text };
+            ActiveClass.Assignments.Add(newAssignment);
+
+            LoadClass(ActiveClass);
+        }
+
+        private void _BTNDeleteAssignment_Click(object sender, EventArgs e)
+        {
+            if (ActiveClass.Assignments == null) return;
+            ActiveClass.Assignments.RemoveAll(x => String.Compare(x.Description, _TBAssignmentName.Text,true)==0);
+            LoadClass(ActiveClass);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SaveAndClose();
+        }
+
+        private void _CLBAssignments_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            var completed = e.NewValue== CheckState.Checked;
+            var checkedItem = ((CheckedListBox)sender).Items[e.Index];
+            if (checkedItem == null || ActiveClass.Assignments==null) return;
+            var Assignment = ActiveClass.Assignments.FirstOrDefault(x => x.Id == ((Assignment)checkedItem).Id);
+            if (Assignment == null) return;
+            Assignment.Completed = completed;
         }
     }
 }

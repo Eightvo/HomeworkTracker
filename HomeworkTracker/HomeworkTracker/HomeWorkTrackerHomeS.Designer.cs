@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Class4Button = new System.Windows.Forms.Button();
+            this._PNLClassList = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.Class1Button = new System.Windows.Forms.Button();
-            this.Class3Button = new System.Windows.Forms.Button();
-            this.Class2Button = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.Class1Panel = new System.Windows.Forms.Panel();
@@ -49,13 +46,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Class2Panel = new System.Windows.Forms.Panel();
             this.Class2Group = new System.Windows.Forms.GroupBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this._CLBAssignments = new System.Windows.Forms.CheckedListBox();
+            this._BTNDeleteAssignment = new System.Windows.Forms.Button();
+            this._BTNAddAssignment = new System.Windows.Forms.Button();
+            this._TBAssignmentName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.Class2NameBox = new System.Windows.Forms.TextBox();
+            this._TBClassName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Class3Panel = new System.Windows.Forms.Panel();
             this.Class3Group = new System.Windows.Forms.GroupBox();
@@ -92,31 +89,20 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.Class4Button);
+            this.panel1.Controls.Add(this._PNLClassList);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.Class1Button);
-            this.panel1.Controls.Add(this.Class3Button);
-            this.panel1.Controls.Add(this.Class2Button);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(170, 357);
             this.panel1.TabIndex = 0;
             // 
-            // Class4Button
+            // _PNLClassList
             // 
-            this.Class4Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(90)))), ((int)(((byte)(136)))));
-            this.Class4Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Class4Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Class4Button.Font = new System.Drawing.Font("Brush Script MT", 20.25F, System.Drawing.FontStyle.Italic);
-            this.Class4Button.Location = new System.Drawing.Point(0, 282);
-            this.Class4Button.Name = "Class4Button";
-            this.Class4Button.Padding = new System.Windows.Forms.Padding(1);
-            this.Class4Button.Size = new System.Drawing.Size(170, 66);
-            this.Class4Button.TabIndex = 4;
-            this.Class4Button.Text = "(Empty)";
-            this.Class4Button.UseVisualStyleBackColor = false;
-            this.Class4Button.Click += new System.EventHandler(this.Class4Button_Click);
+            this._PNLClassList.Location = new System.Drawing.Point(0, 66);
+            this._PNLClassList.Name = "_PNLClassList";
+            this._PNLClassList.Size = new System.Drawing.Size(167, 288);
+            this._PNLClassList.TabIndex = 1;
             // 
             // panel2
             // 
@@ -131,57 +117,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Brush Script MT", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(26, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 29);
+            this.label1.Size = new System.Drawing.Size(144, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pick a Class";
-            // 
-            // Class1Button
-            // 
-            this.Class1Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(90)))), ((int)(((byte)(136)))));
-            this.Class1Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Class1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Class1Button.Font = new System.Drawing.Font("Brush Script MT", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Class1Button.Location = new System.Drawing.Point(0, 66);
-            this.Class1Button.Name = "Class1Button";
-            this.Class1Button.Padding = new System.Windows.Forms.Padding(1);
-            this.Class1Button.Size = new System.Drawing.Size(170, 66);
-            this.Class1Button.TabIndex = 1;
-            this.Class1Button.Text = "(Empty)";
-            this.Class1Button.UseVisualStyleBackColor = false;
-            this.Class1Button.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Class3Button
-            // 
-            this.Class3Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(90)))), ((int)(((byte)(136)))));
-            this.Class3Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Class3Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Class3Button.Font = new System.Drawing.Font("Brush Script MT", 20.25F, System.Drawing.FontStyle.Italic);
-            this.Class3Button.Location = new System.Drawing.Point(0, 210);
-            this.Class3Button.Name = "Class3Button";
-            this.Class3Button.Padding = new System.Windows.Forms.Padding(1);
-            this.Class3Button.Size = new System.Drawing.Size(170, 66);
-            this.Class3Button.TabIndex = 3;
-            this.Class3Button.Text = "(Empty)";
-            this.Class3Button.UseVisualStyleBackColor = false;
-            this.Class3Button.Click += new System.EventHandler(this.Class3Button_Click);
-            // 
-            // Class2Button
-            // 
-            this.Class2Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(90)))), ((int)(((byte)(136)))));
-            this.Class2Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Class2Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Class2Button.Font = new System.Drawing.Font("Brush Script MT", 20.25F, System.Drawing.FontStyle.Italic);
-            this.Class2Button.Location = new System.Drawing.Point(0, 138);
-            this.Class2Button.Name = "Class2Button";
-            this.Class2Button.Padding = new System.Windows.Forms.Padding(1);
-            this.Class2Button.Size = new System.Drawing.Size(170, 66);
-            this.Class2Button.TabIndex = 2;
-            this.Class2Button.Text = "(Empty)";
-            this.Class2Button.UseVisualStyleBackColor = false;
-            this.Class2Button.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 
@@ -249,7 +190,6 @@
             this.button6.TabIndex = 7;
             this.button6.Text = "Delete";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button1
             // 
@@ -259,7 +199,6 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textBox1
             // 
@@ -278,7 +217,6 @@
             this.label3.Size = new System.Drawing.Size(102, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Add An Assignment:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Class1ApplyButton
             // 
@@ -288,7 +226,6 @@
             this.Class1ApplyButton.TabIndex = 2;
             this.Class1ApplyButton.Text = "Apply";
             this.Class1ApplyButton.UseVisualStyleBackColor = true;
-            this.Class1ApplyButton.Click += new System.EventHandler(this.button6_Click);
             // 
             // Class1NameBox
             // 
@@ -298,7 +235,6 @@
             this.Class1NameBox.Name = "Class1NameBox";
             this.Class1NameBox.Size = new System.Drawing.Size(286, 20);
             this.Class1NameBox.TabIndex = 1;
-            this.Class1NameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -313,22 +249,21 @@
             // 
             this.Class2Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.Class2Panel.Controls.Add(this.Class2Group);
-            this.Class2Panel.Controls.Add(this.button2);
-            this.Class2Panel.Controls.Add(this.button3);
-            this.Class2Panel.Controls.Add(this.textBox2);
+            this.Class2Panel.Controls.Add(this._BTNDeleteAssignment);
+            this.Class2Panel.Controls.Add(this._BTNAddAssignment);
+            this.Class2Panel.Controls.Add(this._TBAssignmentName);
             this.Class2Panel.Controls.Add(this.label5);
             this.Class2Panel.Controls.Add(this.button4);
-            this.Class2Panel.Controls.Add(this.Class2NameBox);
+            this.Class2Panel.Controls.Add(this._TBClassName);
             this.Class2Panel.Controls.Add(this.label6);
             this.Class2Panel.Location = new System.Drawing.Point(176, 66);
             this.Class2Panel.Name = "Class2Panel";
             this.Class2Panel.Size = new System.Drawing.Size(438, 253);
             this.Class2Panel.TabIndex = 11;
-            this.Class2Panel.Visible = false;
             // 
             // Class2Group
             // 
-            this.Class2Group.Controls.Add(this.checkedListBox2);
+            this.Class2Group.Controls.Add(this._CLBAssignments);
             this.Class2Group.Location = new System.Drawing.Point(4, 111);
             this.Class2Group.Name = "Class2Group";
             this.Class2Group.Size = new System.Drawing.Size(431, 139);
@@ -336,43 +271,44 @@
             this.Class2Group.TabStop = false;
             this.Class2Group.Text = "Class 2:";
             // 
-            // checkedListBox2
+            // _CLBAssignments
             // 
-            this.checkedListBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(6, 24);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(419, 109);
-            this.checkedListBox2.TabIndex = 3;
+            this._CLBAssignments.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this._CLBAssignments.FormattingEnabled = true;
+            this._CLBAssignments.Location = new System.Drawing.Point(6, 24);
+            this._CLBAssignments.Name = "_CLBAssignments";
+            this._CLBAssignments.Size = new System.Drawing.Size(419, 109);
+            this._CLBAssignments.TabIndex = 3;
+            this._CLBAssignments.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this._CLBAssignments_ItemCheck);
             // 
-            // button2
+            // _BTNDeleteAssignment
             // 
-            this.button2.Location = new System.Drawing.Point(323, 88);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 21);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this._BTNDeleteAssignment.Location = new System.Drawing.Point(323, 88);
+            this._BTNDeleteAssignment.Name = "_BTNDeleteAssignment";
+            this._BTNDeleteAssignment.Size = new System.Drawing.Size(66, 21);
+            this._BTNDeleteAssignment.TabIndex = 7;
+            this._BTNDeleteAssignment.Text = "Delete";
+            this._BTNDeleteAssignment.UseVisualStyleBackColor = true;
+            this._BTNDeleteAssignment.Click += new System.EventHandler(this._BTNDeleteAssignment_Click);
             // 
-            // button3
+            // _BTNAddAssignment
             // 
-            this.button3.Location = new System.Drawing.Point(251, 88);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(66, 21);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Add";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this._BTNAddAssignment.Location = new System.Drawing.Point(251, 88);
+            this._BTNAddAssignment.Name = "_BTNAddAssignment";
+            this._BTNAddAssignment.Size = new System.Drawing.Size(66, 21);
+            this._BTNAddAssignment.TabIndex = 6;
+            this._BTNAddAssignment.Text = "Add";
+            this._BTNAddAssignment.UseVisualStyleBackColor = true;
+            this._BTNAddAssignment.Click += new System.EventHandler(this._BTNAddAssignment_Click);
             // 
-            // textBox2
+            // _TBAssignmentName
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.textBox2.Location = new System.Drawing.Point(113, 88);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 20);
-            this.textBox2.TabIndex = 5;
+            this._TBAssignmentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this._TBAssignmentName.Location = new System.Drawing.Point(113, 88);
+            this._TBAssignmentName.Margin = new System.Windows.Forms.Padding(0);
+            this._TBAssignmentName.Name = "_TBAssignmentName";
+            this._TBAssignmentName.Size = new System.Drawing.Size(135, 20);
+            this._TBAssignmentName.TabIndex = 5;
             // 
             // label5
             // 
@@ -391,16 +327,16 @@
             this.button4.TabIndex = 2;
             this.button4.Text = "Apply";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Class2NameBox
+            // _TBClassName
             // 
-            this.Class2NameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.Class2NameBox.Location = new System.Drawing.Point(65, 4);
-            this.Class2NameBox.Margin = new System.Windows.Forms.Padding(0);
-            this.Class2NameBox.Name = "Class2NameBox";
-            this.Class2NameBox.Size = new System.Drawing.Size(286, 20);
-            this.Class2NameBox.TabIndex = 1;
+            this._TBClassName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this._TBClassName.Location = new System.Drawing.Point(65, 4);
+            this._TBClassName.Margin = new System.Windows.Forms.Padding(0);
+            this._TBClassName.Name = "_TBClassName";
+            this._TBClassName.Size = new System.Drawing.Size(286, 20);
+            this._TBClassName.TabIndex = 1;
             // 
             // label6
             // 
@@ -455,7 +391,6 @@
             this.button7.TabIndex = 7;
             this.button7.Text = "Delete";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // button8
             // 
@@ -465,7 +400,6 @@
             this.button8.TabIndex = 6;
             this.button8.Text = "Add";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
             // textBox4
             // 
@@ -493,7 +427,6 @@
             this.button9.TabIndex = 2;
             this.button9.Text = "Apply";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
             // Class3NameBox
             // 
@@ -557,7 +490,6 @@
             this.button10.TabIndex = 7;
             this.button10.Text = "Delete";
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -567,7 +499,6 @@
             this.button11.TabIndex = 6;
             this.button11.Text = "Add";
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // textBox6
             // 
@@ -595,7 +526,6 @@
             this.button12.TabIndex = 2;
             this.button12.Text = "Apply";
             this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click_1);
             // 
             // Class4NameBox
             // 
@@ -654,10 +584,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Class4Button;
-        private System.Windows.Forms.Button Class2Button;
-        private System.Windows.Forms.Button Class1Button;
-        private System.Windows.Forms.Button Class3Button;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
@@ -665,13 +591,13 @@
         private System.Windows.Forms.Panel Class1Panel;
         private System.Windows.Forms.Panel Class2Panel;
         private System.Windows.Forms.GroupBox Class2Group;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckedListBox _CLBAssignments;
+        private System.Windows.Forms.Button _BTNDeleteAssignment;
+        private System.Windows.Forms.Button _BTNAddAssignment;
+        private System.Windows.Forms.TextBox _TBAssignmentName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox Class2NameBox;
+        private System.Windows.Forms.TextBox _TBClassName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox Class1Group;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
@@ -702,6 +628,7 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox Class3NameBox;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel _PNLClassList;
     }
 }
 

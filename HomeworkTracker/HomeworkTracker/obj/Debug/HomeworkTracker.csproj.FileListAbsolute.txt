@@ -9,3 +9,16 @@ C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\ob
 C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.exe
 C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.pdb
 C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.HomeWorkTrackerHomeS.resources
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.csproj.GenerateResource.cache
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.csprojAssemblyReference.cache
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.HomeWorkTrackerHomeS.resources
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.Resources.resources
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.csproj.CoreCompileInputs.cache
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\bin\Debug\HomeworkTracker.exe.config
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\bin\Debug\HomeworkTracker.exe
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\bin\Debug\HomeworkTracker.pdb
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\bin\Debug\Newtonsoft.Json.dll
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\bin\Debug\Newtonsoft.Json.xml
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.csproj.CopyComplete
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.exe
+G:\git\__OtherPeoplesRepos\HomeworkTracker\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.pdb
