@@ -197,11 +197,11 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(90)))), ((int)(((byte)(136)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(366, 0);
+            this.button5.Location = new System.Drawing.Point(329, 0);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(78, 32);
+            this.button5.Size = new System.Drawing.Size(115, 32);
             this.button5.TabIndex = 0;
-            this.button5.Text = "Exit";
+            this.button5.Text = "Save/Exit";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -353,6 +353,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
@@ -362,6 +363,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // textBox2
             // 
@@ -453,6 +455,7 @@
             this.button7.TabIndex = 7;
             this.button7.Text = "Delete";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // button8
             // 
@@ -462,6 +465,7 @@
             this.button8.TabIndex = 6;
             this.button8.Text = "Add";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
             // textBox4
             // 
@@ -553,6 +557,7 @@
             this.button10.TabIndex = 7;
             this.button10.Text = "Delete";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -562,6 +567,7 @@
             this.button11.TabIndex = 6;
             this.button11.Text = "Add";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // textBox6
             // 
@@ -616,14 +622,15 @@
             this.ClientSize = new System.Drawing.Size(619, 357);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Class2Panel);
             this.Controls.Add(this.Class3Panel);
             this.Controls.Add(this.Class4Panel);
             this.Controls.Add(this.Class1Panel);
-            this.Controls.Add(this.Class2Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomeWorkTrackerHomeS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.HomeWorkTrackerHomeS_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
