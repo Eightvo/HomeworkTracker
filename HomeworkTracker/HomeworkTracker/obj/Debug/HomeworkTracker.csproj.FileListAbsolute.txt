@@ -1,0 +1,11 @@
+C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\bin\Debug\HomeworkTracker.exe.config
+C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\bin\Debug\HomeworkTracker.exe
+C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\bin\Debug\HomeworkTracker.pdb
+C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.csproj.AssemblyReference.cache
+C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.csproj.SuggestedBindingRedirects.cache
+C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.Properties.Resources.resources
+C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.csproj.GenerateResource.cache
+C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.csproj.CoreCompileInputs.cache
+C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.exe
+C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.pdb
+C:\Users\Kobyl\OneDrive\Documents\C# Projects\HomeworkTracker\HomeworkTracker\obj\Debug\HomeworkTracker.HomeWorkTrackerHomeS.resources
